@@ -1,0 +1,74 @@
+$ PYTHONPATH=$PYTHONPATH:libs python analyze_cloudtrail.py --start 3/7/2018 --end 3/10/2018
+
+Summary by Event Name:
++----+-------------------------------+---------+
+|    | Event Name                    |   Count |
+|----+-------------------------------+---------|
+|  0 | AddUserToGroup                |      12 |
+|  1 | CreateAccessKey               |      12 |
+|  2 | CreateLoginProfile            |      12 |
+|  3 | CreateTags                    |     424 |
+|  4 | CreateUser                    |      12 |
+|  5 | DeactivateMFADevice           |       6 |
+|  6 | DeleteAccessKey               |      14 |
+|  7 | DeleteLoginProfile            |      16 |
+|  8 | DeleteNetworkInterface        |     672 |
+|  9 | DeleteRolePolicy              |      78 |
+| 10 | DeleteRoute                   |     348 |
+| 11 | DeleteSecurityGroup           |     318 |
+| 12 | DeleteStack                   |     174 |
+| 13 | DeleteTags                    |     286 |
+| 14 | DeleteUser                    |      14 |
+| 15 | DeleteVirtualMFADevice        |       6 |
+| 16 | DeleteVolume                  |      98 |
+| 17 | DescribeInstances             |   55602 |
+| 18 | DescribeNetworkInterfaces     |      12 |
+| 19 | DescribeRouteTables           |       2 |
+| 20 | DescribeSecurityGroups        |      62 |
+| 21 | DescribeVolumes               |       6 |
+| 22 | GetLoginProfile               |    3996 |
+| 23 | ListAccessKeys                |      16 |
+| 24 | ListGroupsForUser             |      66 |
+| 25 | ListMFADevices                |    3896 |
+| 26 | ListStackResources            |   44964 |
+| 27 | ListStacks                    |     572 |
+| 28 | ListUsers                     |     584 |
+| 29 | LookupEvents                  |     102 |
+| 30 | RemoveRoleFromInstanceProfile |      78 |
+| 31 | RemoveUserFromGroup           |      18 |
+| 32 | RevokeSecurityGroupIngress    |      56 |
+| 33 | StopInstances                 |      82 |
+| 34 | TerminateInstances            |      70 |
+| 35 | UpdateLoginProfile            |       6 |
++----+-------------------------------+---------+
+
+Summary by Error Code / Event Name:
++----+----------------------------------------------------------------+---------+
+|    | Error Code / Event Name                                        |   Count |
+|----+----------------------------------------------------------------+---------|
+|  0 | (u'AccessDenied', u'DeleteRolePolicy')                         |      78 |
+|  1 | (u'AccessDenied', u'RemoveRoleFromInstanceProfile')            |      78 |
+|  2 | (u'Client.DependencyViolation', u'DeleteSecurityGroup')        |     274 |
+|  3 | (u'Client.InvalidInstanceID.Malformed', u'TerminateInstances') |       6 |
+|  4 | (u'Client.InvalidInstanceID.NotFound', u'CreateTags')          |      64 |
+|  5 | (u'Client.InvalidInstanceID.NotFound', u'DescribeInstances')   |   40092 |
+|  6 | (u'Client.InvalidParameterValue', u'DeleteNetworkInterface')   |     504 |
+|  7 | (u'Client.MissingParameter', u'RevokeSecurityGroupIngress')    |      12 |
+|  8 | (u'Client.OperationNotPermitted', u'TerminateInstances')       |      42 |
+|  9 | (u'Client.RequestLimitExceeded', u'DescribeInstances')         |      22 |
+| 10 | (u'InvalidNextTokenException', u'LookupEvents')                |      24 |
+| 11 | (u'NoSuchEntityException', u'DeleteLoginProfile')              |       2 |
+| 12 | (u'NoSuchEntityException', u'GetLoginProfile')                 |     144 |
+| 13 | (u'ThrottlingException', u'DeleteStack')                       |      26 |
+| 14 | (u'ThrottlingException', u'LookupEvents')                      |      46 |
++----+----------------------------------------------------------------+---------+
+
+Summary of errors by Date:
++----+------------+---------+
+|    | Date       |   Count |
+|----+------------+---------|
+|  0 | 2018-03-06 |    1118 |
+|  1 | 2018-03-07 |   37010 |
+|  2 | 2018-03-08 |   37554 |
+|  3 | 2018-03-09 |   37010 |
++----+------------+---------+

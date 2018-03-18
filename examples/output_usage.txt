@@ -1,0 +1,12 @@
+$ PYTHONPATH=$PYTHONPATH:libs python analyze_cloudtrail.py --help
+usage: analyze_cloudtrail.py [-h] [--region REGION] [--start START]
+                             [--end END] [--format FORMAT]
+
+Explore Cloud Trail Logs
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --region REGION  AWS region
+  --start START    Start date in month/day/year format
+  --end END        End date in month/day/year format
+  --format FORMAT  Output format: TEXT | HTML. Case insensitive
