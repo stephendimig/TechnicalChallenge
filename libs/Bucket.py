@@ -23,8 +23,8 @@ import json
 ##
 class Bucket(object):
     # Constants
-    AWS_ACCESS_KEY_ID = 'AKIAJWLDT4TBHPP3MXEA'
-    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_ACCESS_KEY_ID = ''
+    AWS_SECRET_ACCESS_KEY = ''
     CLOUDTRAIL_BUCKET = 'cloudtrail-netapphcl'
     TARGET_USER = 'portal.service'
 

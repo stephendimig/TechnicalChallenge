@@ -20,6 +20,13 @@ from enum import Enum
 import pandas as pd
 from tabulate import tabulate
 
+# Matplotlib includes
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import cStringIO
+import urllib
+
 ##
 ## Class: ReportFormatterType
 ## Description: An enumeration used to specify the output type
@@ -311,6 +318,33 @@ class HtmlFormatter(ReportFormatter):
             tempdf.loc[len(tempdf.index)] = [date, count]
         print tabulate(tempdf, headers=tempdf.columns.values.tolist(), tablefmt='html')
         print '<br \>'
+        print self.plotSummary(tempdf)
+
+    def plotSummary(self, mydf):
+        # Create a plot.
+        fig = plt.figure(figsize=(8, 8))
+
+        # Now plot histogram by cloud provider
+        plt.subplot(1, 1, 1)
+        labels = mydf['Date']
+        x = range(0, len(labels))
+        y = mydf['Count']
+
+        plt.title('Summary of errors by Date')
+        plt.grid(True)
+        b1 = plt.bar(x, y, align='center', alpha=0.5, color=['r', 'g', 'b'])
+        plt.xticks(x, labels, rotation=45, ha='right')
+        plt.ylabel('Errors')
+
+        for i, v in enumerate(y):
+            plt.text(i - 0.0375, v / 2, str(v), color='black', fontweight='bold')
+
+
+        plt.tight_layout()
+        ram = cStringIO.StringIO()
+        plt.savefig(ram, format='png')
+        data = ram.getvalue().encode('base64')
+        return '<img src="data:image/png;base64,{}">'.format(urllib.quote(data.rstrip('\n')))
 
     ##
     ## Name: printTrailer

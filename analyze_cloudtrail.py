@@ -29,7 +29,7 @@
 ##
 ## What I would Like to have added.
 ## 1. More tests
-## 2. Some matplotlib visualizations in the html format report
+## 2. More matplotlib visualizations in the html format report. Report contains one.
 ## 3. A statistical summary (ie; percentage of each type of error, etc.)
 ##
 ##########################################################
