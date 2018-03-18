@@ -1,0 +1,81 @@
+Stephens-MacBook-Pro:TechnicalChallenge sdimig$ PYTHONPATH=$PYTHONPATH:libs python analyze_cloudtrail.py --format html --start 3/7/2018 --end 3/8/2018
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<H1>AWS Cloudtrail Log Report</H1>
+<H2>Summary by Event Name:</H2>
+<table>
+<thead>
+<tr><th style="text-align: right;">  </th><th>Event Name                   </th><th style="text-align: right;">  Count</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;"> 0</td><td>AddUserToGroup               </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 1</td><td>CreateAccessKey              </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 2</td><td>CreateLoginProfile           </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 3</td><td>CreateTags                   </td><td style="text-align: right;">     72</td></tr>
+<tr><td style="text-align: right;"> 4</td><td>CreateUser                   </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 5</td><td>DeactivateMFADevice          </td><td style="text-align: right;">      2</td></tr>
+<tr><td style="text-align: right;"> 6</td><td>DeleteAccessKey              </td><td style="text-align: right;">      8</td></tr>
+<tr><td style="text-align: right;"> 7</td><td>DeleteLoginProfile           </td><td style="text-align: right;">     10</td></tr>
+<tr><td style="text-align: right;"> 8</td><td>DeleteNetworkInterface       </td><td style="text-align: right;">    256</td></tr>
+<tr><td style="text-align: right;"> 9</td><td>DeleteRolePolicy             </td><td style="text-align: right;">     26</td></tr>
+<tr><td style="text-align: right;">10</td><td>DeleteSecurityGroup          </td><td style="text-align: right;">     98</td></tr>
+<tr><td style="text-align: right;">11</td><td>DeleteStack                  </td><td style="text-align: right;">     58</td></tr>
+<tr><td style="text-align: right;">12</td><td>DeleteTags                   </td><td style="text-align: right;">    114</td></tr>
+<tr><td style="text-align: right;">13</td><td>DeleteUser                   </td><td style="text-align: right;">      8</td></tr>
+<tr><td style="text-align: right;">14</td><td>DeleteVirtualMFADevice       </td><td style="text-align: right;">      2</td></tr>
+<tr><td style="text-align: right;">15</td><td>DeleteVolume                 </td><td style="text-align: right;">     88</td></tr>
+<tr><td style="text-align: right;">16</td><td>DescribeInstances            </td><td style="text-align: right;">  18250</td></tr>
+<tr><td style="text-align: right;">17</td><td>DescribeNetworkInterfaces    </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;">18</td><td>DescribeSecurityGroups       </td><td style="text-align: right;">     16</td></tr>
+<tr><td style="text-align: right;">19</td><td>DescribeVolumes              </td><td style="text-align: right;">      2</td></tr>
+<tr><td style="text-align: right;">20</td><td>GetLoginProfile              </td><td style="text-align: right;">   1336</td></tr>
+<tr><td style="text-align: right;">21</td><td>ListAccessKeys               </td><td style="text-align: right;">     10</td></tr>
+<tr><td style="text-align: right;">22</td><td>ListGroupsForUser            </td><td style="text-align: right;">     28</td></tr>
+<tr><td style="text-align: right;">23</td><td>ListMFADevices               </td><td style="text-align: right;">   1298</td></tr>
+<tr><td style="text-align: right;">24</td><td>ListStackResources           </td><td style="text-align: right;">  14812</td></tr>
+<tr><td style="text-align: right;">25</td><td>ListStacks                   </td><td style="text-align: right;">    188</td></tr>
+<tr><td style="text-align: right;">26</td><td>ListUsers                    </td><td style="text-align: right;">    170</td></tr>
+<tr><td style="text-align: right;">27</td><td>LookupEvents                 </td><td style="text-align: right;">     36</td></tr>
+<tr><td style="text-align: right;">28</td><td>RemoveRoleFromInstanceProfile</td><td style="text-align: right;">     26</td></tr>
+<tr><td style="text-align: right;">29</td><td>RemoveUserFromGroup          </td><td style="text-align: right;">     10</td></tr>
+<tr><td style="text-align: right;">30</td><td>RevokeSecurityGroupIngress   </td><td style="text-align: right;">     14</td></tr>
+<tr><td style="text-align: right;">31</td><td>StopInstances                </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;">32</td><td>TerminateInstances           </td><td style="text-align: right;">     38</td></tr>
+</tbody>
+</table>
+<br \>
+<H2>Summary by Error Code / Event Name:</H2>
+<table>
+<thead>
+<tr><th style="text-align: right;">  </th><th>Error Code / Event Name                                       </th><th style="text-align: right;">  Count</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;"> 0</td><td>(u'AccessDenied', u'DeleteRolePolicy')                        </td><td style="text-align: right;">     26</td></tr>
+<tr><td style="text-align: right;"> 1</td><td>(u'AccessDenied', u'RemoveRoleFromInstanceProfile')           </td><td style="text-align: right;">     26</td></tr>
+<tr><td style="text-align: right;"> 2</td><td>(u'Client.DependencyViolation', u'DeleteSecurityGroup')       </td><td style="text-align: right;">     88</td></tr>
+<tr><td style="text-align: right;"> 3</td><td>(u'Client.InvalidInstanceID.Malformed', u'TerminateInstances')</td><td style="text-align: right;">      2</td></tr>
+<tr><td style="text-align: right;"> 4</td><td>(u'Client.InvalidInstanceID.NotFound', u'CreateTags')         </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 5</td><td>(u'Client.InvalidInstanceID.NotFound', u'DescribeInstances')  </td><td style="text-align: right;">  13196</td></tr>
+<tr><td style="text-align: right;"> 6</td><td>(u'Client.InvalidParameterValue', u'DeleteNetworkInterface')  </td><td style="text-align: right;">    168</td></tr>
+<tr><td style="text-align: right;"> 7</td><td>(u'Client.MissingParameter', u'RevokeSecurityGroupIngress')   </td><td style="text-align: right;">      4</td></tr>
+<tr><td style="text-align: right;"> 8</td><td>(u'Client.OperationNotPermitted', u'TerminateInstances')      </td><td style="text-align: right;">     14</td></tr>
+<tr><td style="text-align: right;"> 9</td><td>(u'InvalidNextTokenException', u'LookupEvents')               </td><td style="text-align: right;">      8</td></tr>
+<tr><td style="text-align: right;">10</td><td>(u'NoSuchEntityException', u'DeleteLoginProfile')             </td><td style="text-align: right;">      2</td></tr>
+<tr><td style="text-align: right;">11</td><td>(u'NoSuchEntityException', u'GetLoginProfile')                </td><td style="text-align: right;">     48</td></tr>
+<tr><td style="text-align: right;">12</td><td>(u'ThrottlingException', u'DeleteStack')                      </td><td style="text-align: right;">      8</td></tr>
+<tr><td style="text-align: right;">13</td><td>(u'ThrottlingException', u'LookupEvents')                     </td><td style="text-align: right;">     18</td></tr>
+</tbody>
+</table>
+<br \>
+<H2>Summary of errors by Date:</H2>
+<table>
+<thead>
+<tr><th style="text-align: right;">  </th><th>Date      </th><th style="text-align: right;">  Count</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;"> 0</td><td>2018-03-06</td><td style="text-align: right;">   1118</td></tr>
+<tr><td style="text-align: right;"> 1</td><td>2018-03-07</td><td style="text-align: right;">  35882</td></tr>
+</tbody>
+</table>
+<br \>
+</body></html>

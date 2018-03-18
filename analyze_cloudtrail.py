@@ -27,6 +27,11 @@
 ## 2. A summary of counts for each error that occurred in the date range grouped by error code and event type.
 ## 3. A summary of counts for each error that occurred in the date range grouped by error code and date.
 ##
+## What I would Like to have added.
+## 1. More tests
+## 2. Some matplotlib visualizations in the html format report
+## 3. A statistical summary (ie; percentage of each type of error, etc.)
+##
 ##########################################################
 
 # System imports
