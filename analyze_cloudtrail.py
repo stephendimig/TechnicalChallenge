@@ -5,14 +5,6 @@
 ## Description: This file is the main python script for generating analysis reports
 ## for cloudtrail data based on the following technical challenge.
 ##
-## Technical Challenge: (Any language like - RUBY, PYTHON)
-## Challenge is about parsing the logs files. Parse the
-## Jenkins/system/webserver logs and look for specific words in the log like
-## FATAL or ERROR and output it to another log.
-## Consolidated view based on ERROR TYPE, DATE and # OF OCCURENCES in a Day.
-##
-## I chose to parse out AWS cloudtrail logs rather than a Jenkins/system/webserver logs mostly
-## due to applicabity to my current role (ie; I can reuse this in my job if things don't work out).
 ##
 ## Usage:
 ## analyze_cloudtrail.py [--region <AWS region>] --start <Date in mm/dd/yyyy> --end <Date in mm/dd/yyyy> [--format <TEXT | HTML>]
